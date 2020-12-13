@@ -9,28 +9,24 @@
  * https://scandipwa.gitbook.io/create-scandipwa-app/extensions/application-plugins
  */
 
-import { createElement } from 'react';
+import { createElement } from "react";
 
-import WelcomePage from '../component/WelcomePage';
+import WelcomePage from "../component/WelcomePage";
 
 const addWelcomePageRoute = (member) => [
-    ...member,
-    {
-        position: 1000,
-        path: '/',
-        render: (props) => createElement(WelcomePage, props)
-    }
+  ...member,
+  {
+    position: 1000,
+    path: "/",
+    render: (props) => createElement(WelcomePage, props),
+  },
 ];
-
+// scandipwa extension create NAME
+// npm i -g scandipwa-cli
 export default {
-    'Router/Component/Router/Component/RouterComponent': {
-        'member-property': {
-            switchRoutesList: addWelcomePageRoute
-        }
+  "Router/Component/Router/Component/RouterComponent": {
+    "member-property": {
+      switchRoutesList: addWelcomePageRoute,
     },
-    'ScandipwaTest-App-2/Component/WelcomePage/Component/WelcomePageComponent': {
-        'member-function': {
-            renderHello: () => 'Goodbye - That is cool'
-        }
-    }
+  },
 };

@@ -1,60 +1,50 @@
-import { PureComponent } from 'react';
+import { PureComponent } from "react";
 
-import logo from './logo.svg';
+import logo from "./logo.svg";
 
-import './WelcomePage.style.scss';
+import "./WelcomePage.style.scss";
 
 /** @namespace ScandipwaTest-App-2/Component/WelcomePage/Component/WelcomePageComponent */
 export class WelcomePageComponent extends PureComponent {
-    typeMap = {};
+  typeMap = {};
 
-    renderLogo() {
-        return (
-            <img
-              src={ logo }
-              className="WelcomePage-Logo"
-              alt="ScandiPWA logo"
-            />
-        );
-    }
+  renderLogo() {
+    return <img src={logo} className="WelcomePage-Logo" alt="ScandiPWA logo" />;
+  }
 
-    renderHello() {
-        return 'Hello';
-    }
+  renderHello() {
+    return "Hello - default value";
+  }
 
-    renderWelcomeMessage() {
-        return (
-            <>
-                <h2>{ __('This file source-code is located in:') }</h2>
-                <p>
-                    <code>src/component/WelcomePage/WelcomePage.component.js</code>
-                </p>
-                <p>
-                    { __('Edit it and save to reload.') }
-                </p>
-                <p>
-                    { this.renderHello() }
-                </p>
-                <a
-                  className="WelcomePage-Link"
-                  href="https://scandipwa.gitbook.io/create-scandipwa-app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                    { __('Learn ScandiPWA') }
-                </a>
-            </>
-        );
-    }
+  renderWelcomeMessage() {
+    return (
+      <>
+        <h2>{__("This file source-code is located in:")}</h2>
+        <p>
+          <code>src/component/WelcomePage/WelcomePage.component.js</code>
+        </p>
+        <p>{__("Edit it and save to reload.")}</p>
+        <p>{this.renderHello()}</p>
+        <a
+          className="WelcomePage-Link"
+          href="https://scandipwa.gitbook.io/create-scandipwa-app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {__("Learn ScandiPWA")}
+        </a>
+      </>
+    );
+  }
 
-    render() {
-        return (
-            <main className="WelcomePage">
-                { this.renderLogo() }
-                { this.renderWelcomeMessage() }
-            </main>
-        );
-    }
+  render() {
+    return (
+      <main className="WelcomePage">
+        {this.renderLogo()}
+        {this.renderWelcomeMessage()}
+      </main>
+    );
+  }
 }
 
 export default WelcomePageComponent;

@@ -9,14 +9,16 @@
     "dependencies": {
         "@scandipwa/scandipwa-scripts": "2.0.12",
         "@scandipwa/framework": "0.0.3",
-        "@scandipwa/router": "0.0.3"
+        "@scandipwa/router": "0.0.3",
+        "extension": "link:../extension"
     },
     "scandipwa": {
         "themeAlias": "Blank",
         "type": "theme",
         "extensions": {
             "@scandipwa/framework": true,
-            "@scandipwa/router": true
+            "@scandipwa/router": true,
+            "extension": true
         }
     },
     "browserslist": {
@@ -32,6 +34,7 @@
         ]
     },
     "eslintConfig": {
+        "ignorePatterns": ["src/**/*"],
         "extends": "@scandipwa"
     },
     "license": "OSL-3.0",
